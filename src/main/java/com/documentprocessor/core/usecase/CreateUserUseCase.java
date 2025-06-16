@@ -18,12 +18,12 @@ public class CreateUserUseCase implements CreateUserPortIn {
     @Override
     public Long createUser(CreateUserRequest createUserRequest) {
         var userExists = userRepositoryPortOut.existsByEmail(createUserRequest.email());
-        if(userExists){
+        if (userExists) {
             throw new ConflictedUserException("email");
         }
 
         var newUser = userMapper.toDomain(createUserRequest);
         var savedUser = userRepositoryPortOut.save(newUser);
-        return  savedUser.getId();
+        return savedUser.getId();
     }
 }

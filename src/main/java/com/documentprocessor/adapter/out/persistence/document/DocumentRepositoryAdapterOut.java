@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class DocumentRepositoryAdapterOut implements DocumentRepositoryPortOut {
 
-    private final DocumentMapper mapper;
+    private final DocumentMapper documentMapper;
     private final DocumentRepository documentRepository;
 
     @Override
     public void save(Document document) {
-        var entity = mapper.toEntity(document);
+        var entity = documentMapper.toEntity(document);
         documentRepository.save(entity);
     }
 }
