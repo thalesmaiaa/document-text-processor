@@ -1,7 +1,7 @@
 package com.documentprocessor.adapter.out.persistence.document;
 
 import com.documentprocessor.adapter.out.persistence.user.UserEntity;
-import com.documentprocessor.core.domain.DocumentProcessingStatus;
+import com.documentprocessor.core.domain.document.DocumentProcessingStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,13 @@
 package com.documentprocessor.core.domain;
 
-import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageHeaders;
 
-public abstract class BaseMessage {
+public abstract class BaseMessage<T> {
 
     public abstract String getTopic();
 
-    public abstract Message<?> getMessage();
+    public abstract T getPayload();
+
+    public abstract MessageHeaders getHeaders();
+
 }

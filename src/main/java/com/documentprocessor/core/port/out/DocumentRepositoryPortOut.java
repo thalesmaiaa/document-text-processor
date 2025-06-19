@@ -1,8 +1,8 @@
 package com.documentprocessor.core.port.out;
 
-import com.documentprocessor.core.domain.Document;
+import com.documentprocessor.core.domain.document.Document;
 
 public interface DocumentRepositoryPortOut {
 
-    void save(Document document);
+    Document save(Document document);
 }

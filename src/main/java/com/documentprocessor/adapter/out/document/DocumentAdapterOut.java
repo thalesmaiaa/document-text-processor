@@ -14,7 +14,7 @@ import java.net.URL;
 
 @Component
 @RequiredArgsConstructor
-public class DocumentObjectAdapterPortOut implements DocumentAdapterPortOut {
+public class DocumentAdapterOut implements DocumentAdapterPortOut {
 
     private final S3Client s3Client;
 

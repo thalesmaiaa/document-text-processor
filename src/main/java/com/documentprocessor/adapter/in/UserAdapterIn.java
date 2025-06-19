@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/users")
-public class UserAdapterPortIn {
+public class UserAdapterIn {
 
     private final CreateUserPortIn createUserPortIn;
 

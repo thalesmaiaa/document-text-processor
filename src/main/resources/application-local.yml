@@ -2,10 +2,9 @@ spring:
   cloud:
     aws:
       credentials:
-        access-key: ANUJDEKAVADIYAEXAMPLE   # localstack credentials
-        secret-key: 2QvM4/Tdmf38SkcD/qalvXO4EXAMPLEKEY # localstack credentials
-      endpoint:
-        uri: http://localhost:4566
+        access-key: ANUJDEKAVADIYAEXAMPLE
+        secret-key: 2QvM4/Tdmf38SkcD/qalvXO4EXAMPLEKEY
+      endpoint: http://localhost:4566
 
   datasource:
     url: jdbc:postgresql://localhost:5432/document_processor

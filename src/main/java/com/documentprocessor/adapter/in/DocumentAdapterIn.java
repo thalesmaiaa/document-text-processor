@@ -15,7 +15,7 @@ import java.io.IOException;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/documents")
-public class DocumentAdapterPortIn {
+public class DocumentAdapterIn {
 
     private final UploadDocumentPortIn uploadDocumentPortIn;
 

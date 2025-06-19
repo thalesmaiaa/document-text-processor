@@ -1,6 +1,6 @@
 package com.documentprocessor.adapter.out.persistence.document;
 
-import com.documentprocessor.core.domain.Document;
+import com.documentprocessor.core.domain.document.Document;
 import com.documentprocessor.core.mappers.DocumentMapper;
 import com.documentprocessor.core.port.out.DocumentRepositoryPortOut;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +14,9 @@ public class DocumentRepositoryAdapterOut implements DocumentRepositoryPortOut {
     private final DocumentRepository documentRepository;
 
     @Override
-    public void save(Document document) {
+    public Document save(Document document) {
         var entity = documentMapper.toEntity(document);
-        documentRepository.save(entity);
+        var savedDocument = documentRepository.save(entity);
+        return documentMapper.toDomain(savedDocument);
     }
 }

@@ -9,7 +9,6 @@ spring:
       hibernate:
         show_sql: true
 
-
   servlet:
     multipart:
       enabled: true
@@ -19,4 +18,3 @@ spring:
 server:
   servlet:
     context-path: /document-processor
-
