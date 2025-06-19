@@ -6,7 +6,7 @@ import org.springframework.data.auditing.DateTimeProvider;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import java.time.ZoneId;
 import java.util.Optional;
 
 @Configuration
@@ -15,6 +15,6 @@ public class JpaConfig {
 
     @Bean
     public DateTimeProvider utcDateTimeProvider() {
-        return () -> Optional.of(LocalDateTime.now(ZoneOffset.of("America/Sao_Paulo")));
+        return () -> Optional.of(LocalDateTime.now(ZoneId.of("America/Sao_Paulo")));
     }
 }
